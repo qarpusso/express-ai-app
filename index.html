@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duck.ai 🦆</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="app-header">
+        <div class="title-group">
+          <img src="assets/duck.svg" alt="Duck" class="genie-icon-img" />
+          <h1>Duck.ai</h1>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <form id="gift-form" class="gift-form">
+          <div class="settings-section">
+            <div class="setting-item">
+              <label for="model-select">Model:</label>
+              <select id="model-select" class="model-select">
+                <option value="gpt-4o">GPT-4o</option>
+                <option value="gpt-4o-mini">GPT-4o Mini</option>
+                <option value="o1-preview">o1 Preview</option>
+                <option value="o1-mini">o1 Mini</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-section">
+            <div class="input-wrapper">
+              <textarea
+                id="user-input"
+                placeholder="Ask me anything..."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="lamp-container">
+            <button
+              type="submit"
+              id="lamp-button"
+              class="lamp-btn"
+              aria-label="Ask Duck"
+            >
+              <span class="lamp-icon">
+                <img
+                  src="assets/duck.svg"
+                  alt="Duck"
+                  class="lamp-icon-img"
+                />
+              </span>
+              <span class="lamp-text">Quack!</span>
+            </button>
+          </div>
+        </form>
+
+        <section class="output-section">
+          <div id="output-container" class="hidden">
+            <div id="output-content"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
